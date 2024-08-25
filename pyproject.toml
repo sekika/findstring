@@ -1,0 +1,51 @@
+[project]
+name = "findstring"
+version = "0.5"
+description = "Search string from files recursively including pdf and docx files"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Katsutoshi Seki"}
+]
+dependencies = [
+    'docx',
+    'pdfminer.six',
+    'setuptools'
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Environment :: Console",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+    "Operating System :: Microsoft :: Windows :: Windows 11",
+    "Operating System :: POSIX",
+    "Operating System :: POSIX :: BSD",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Text Processing :: Filters",
+    "Natural Language :: English"
+]
+
+[project.urls]
+Homepage = "https://pypi.org/project/findstring/"
+Source = "https://github.com/sekika/findstring"
+
+[build-system]
+requires = ["setuptools>=67.6.1"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[project.scripts]
+findstring = "findstring.entry:entry"
