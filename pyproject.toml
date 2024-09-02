@@ -8,7 +8,7 @@ authors = [
     {name = "Katsutoshi Seki"}
 ]
 dependencies = [
-    'docx',
+    'python-docx',
     'pdfminer.six',
     'setuptools'
 ]
