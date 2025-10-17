@@ -2,7 +2,7 @@
 Entry point of findstring
 """
 import argparse
-import pkg_resources
+from importlib.metadata import version
 from .findstring import findstring
 from .show import show
 
@@ -19,9 +19,8 @@ def entry():
         None
     """
     # Argument parsing and handling for the findstring program
-    version = pkg_resources.get_distribution('findstring').version
     parser = argparse.ArgumentParser(
-        description=f"findstring {version} - search for a string in files recursively including pdf and docx files. See https://pypi.org/project/findstring")
+        description=f"findstring {version('findstring')} - search for a string in files recursively including pdf and docx files. See https://pypi.org/project/findstring")
     parser.add_argument(
         "search_string",
         help="string to search for in files")
