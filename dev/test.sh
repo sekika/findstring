@@ -1,6 +1,9 @@
 #!/bin/sh
 # Change to this directory
 cd `echo $0 | sed -e 's/[^/]*$//'`
+cd ..
+pytest
+cd dev
 echo '=== test'
 findstring -d .. -l 35 関
 ./test.py

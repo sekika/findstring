@@ -19,4 +19,4 @@ def show(text):
     if len(text.encode('utf-8')) > chars:
         showtext = text.encode(
             'utf-8')[:chars - 3].decode('utf-8', 'ignore') + '...'
-    print(f'{" "*chars}\r{showtext}\r', end='')
+    print(f'{" " * chars}\r{showtext}\r', end='')
